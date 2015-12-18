@@ -2,18 +2,8 @@ import React from 'react';
 
 const StickyStackContext = React.createClass({
 
-  items: [],
-
-  childContextTypes: {
-    getStyle: React.PropTypes.func,
-    register: React.PropTypes.func,
-  },
-
-  getChildContext() {
-    return {
-      getStyle: this._getStyle,
-      register: this._register,
-    };
+  propTypes: {
+    children: React.PropTypes.any,
   },
 
   getInitialState() {
@@ -28,6 +18,13 @@ const StickyStackContext = React.createClass({
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this._calculateStyles);
+  },
+
+  getChildContext() {
+    return {
+      getStyle: this._getStyle,
+      register: this._register,
+    };
   },
 
   _register(position, offsetTop, offsetHeight) {
@@ -51,11 +48,11 @@ const StickyStackContext = React.createClass({
           position: 'fixed',
           top: height,
           width: '100%',
-        }
+        };
       } else {
         styles[index] = {
           position: 'static',
-        }
+        };
       }
       return height + item.offsetHeight;
     }, 0);
@@ -72,6 +69,13 @@ const StickyStackContext = React.createClass({
         {children}
       </div>
     );
+  },
+
+  items: [],
+
+  childContextTypes: {
+    getStyle: React.PropTypes.func,
+    register: React.PropTypes.func,
   },
 
 });

@@ -1,13 +1,11 @@
 jest.dontMock('../sticky-stack-context');
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 
 const StickyStackContext = require('../sticky-stack-context').default;
 
 describe('StickyStackContext', () => {
-
   let stickyStackContext;
 
   beforeEach(() => {
@@ -78,5 +76,4 @@ describe('StickyStackContext', () => {
       position: 'static',
     });
   });
-
 });

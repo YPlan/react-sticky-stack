@@ -4,12 +4,8 @@ import ReactDOM from 'react-dom';
 const StickyStackItem = React.createClass({
 
   propTypes: {
+    children: React.PropTypes.any,
     position: React.PropTypes.number,
-  },
-
-  contextTypes: {
-    getStyle: React.PropTypes.func,
-    register: React.PropTypes.func,
   },
 
   getInitialState() {
@@ -25,8 +21,12 @@ const StickyStackItem = React.createClass({
 
     register(position, offsetTop, offsetHeight);
 
+    this._setHeight(offsetHeight);
+  },
+
+  _setHeight(height) {
     this.setState({
-      height: offsetHeight,
+      height,
     });
   },
 
@@ -42,6 +42,11 @@ const StickyStackItem = React.createClass({
         </div>
       </div>
     );
+  },
+
+  contextTypes: {
+    getStyle: React.PropTypes.func,
+    register: React.PropTypes.func,
   },
 
 });
