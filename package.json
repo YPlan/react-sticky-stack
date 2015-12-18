@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "start": "node ./demo/server"
   },
   "author": "YPlan Front End Team",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "babel-preset-react": "^6.3.13",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.11.3",
+    "express": "^4.13.3",
     "jest-cli": "^0.8.2",
     "react-addons-test-utils": "^0.14.3"
   },
