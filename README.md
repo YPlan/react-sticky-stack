@@ -5,6 +5,11 @@ React Sticky Stack
 
 A Sticky Stack component for [React.js](http://facebook.github.io/react/)
 
+Demo
+----
+
+[https://react-sticky-stack.herokuapp.com](https://react-sticky-stack.herokuapp.com)
+
 Usage
 -----
 
