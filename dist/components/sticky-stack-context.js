@@ -19,6 +19,7 @@ var StickyStackContext = _react2.default.createClass({
 
   getInitialState: function getInitialState() {
     return {
+      items: [],
       styles: []
     };
   },
@@ -35,13 +36,16 @@ var StickyStackContext = _react2.default.createClass({
     };
   },
   _register: function _register(position, offsetTop, offsetHeight) {
-    if (!this.items) {
-      this.items = [];
-    }
-    this.items[position] = {
+    var items = this.state.items;
+
+    items[position] = {
       offsetTop: offsetTop,
       offsetHeight: offsetHeight
     };
+
+    this.setState({
+      items: items
+    });
   },
   _getStyle: function _getStyle(position) {
     var styles = this.state.styles;
@@ -49,8 +53,11 @@ var StickyStackContext = _react2.default.createClass({
     return styles[position];
   },
   _calculateStyles: function _calculateStyles() {
+    var items = this.state.items;
+
     var styles = [];
-    this.items.reduce(function (height, item, index) {
+
+    items.reduce(function (height, item, index) {
       if (window.pageYOffset + height >= item.offsetTop) {
         styles[index] = {
           position: 'fixed',
@@ -64,6 +71,7 @@ var StickyStackContext = _react2.default.createClass({
       }
       return height + item.offsetHeight;
     }, 0);
+
     this.setState({
       styles: styles
     });

@@ -38,7 +38,7 @@ describe('StickyStackContext', function () {
   it('registers an item', function () {
     stickyStackContext._register(0, 10, 10);
 
-    expect(stickyStackContext.items.length).toBe(1);
+    expect(stickyStackContext.state.items.length).toBe(1);
   });
 
   it('calculates the styles (static)', function () {
