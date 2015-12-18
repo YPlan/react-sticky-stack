@@ -8,6 +8,7 @@ const StickyStackContext = React.createClass({
 
   getInitialState() {
     return {
+      items: [],
       styles: [],
     };
   },
@@ -28,13 +29,16 @@ const StickyStackContext = React.createClass({
   },
 
   _register(position, offsetTop, offsetHeight) {
-    if (!this.items) {
-      this.items = [];
-    }
-    this.items[position] = {
+    const {items} = this.state;
+
+    items[position] = {
       offsetTop,
       offsetHeight,
     };
+
+    this.setState({
+      items,
+    });
   },
 
   _getStyle(position) {
@@ -44,8 +48,10 @@ const StickyStackContext = React.createClass({
   },
 
   _calculateStyles() {
+    const {items} = this.state;
     const styles = [];
-    this.items.reduce((height, item, index) => {
+
+    items.reduce((height, item, index) => {
       if (window.pageYOffset + height >= item.offsetTop) {
         styles[index] = {
           position: 'fixed',
@@ -59,6 +65,7 @@ const StickyStackContext = React.createClass({
       }
       return height + item.offsetHeight;
     }, 0);
+
     this.setState({
       styles,
     });
