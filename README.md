@@ -54,5 +54,5 @@ const App = React.createClass({
   },
 });
 
-ReactDOM.render(<App />, document.body);
+ReactDOM.render(<App />, document.getElementById('app'));
 ```
