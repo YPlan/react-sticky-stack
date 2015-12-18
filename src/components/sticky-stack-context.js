@@ -28,6 +28,9 @@ const StickyStackContext = React.createClass({
   },
 
   _register(position, offsetTop, offsetHeight) {
+    if (!this.items) {
+      this.items = [];
+    }
     this.items[position] = {
       offsetTop,
       offsetHeight,

@@ -35,6 +35,9 @@ var StickyStackContext = _react2.default.createClass({
     };
   },
   _register: function _register(position, offsetTop, offsetHeight) {
+    if (!this.items) {
+      this.items = [];
+    }
     this.items[position] = {
       offsetTop: offsetTop,
       offsetHeight: offsetHeight
