@@ -1,0 +1,31 @@
+{
+  "name": "react-sticky-stack",
+  "version": "1.0.0",
+  "description": "A Sticky Stack component for React.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "YPlan Front End Team",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-jest": "^6.0.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "jest-cli": "^0.8.2",
+    "react-addons-test-utils": "^0.14.3"
+  },
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ]
+  }
+}

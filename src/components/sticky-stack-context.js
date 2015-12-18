@@ -1,0 +1,79 @@
+import React from 'react';
+
+const StickyStackContext = React.createClass({
+
+  items: [],
+
+  childContextTypes: {
+    getStyle: React.PropTypes.func,
+    register: React.PropTypes.func,
+  },
+
+  getChildContext() {
+    return {
+      getStyle: this._getStyle,
+      register: this._register,
+    };
+  },
+
+  getInitialState() {
+    return {
+      styles: [],
+    };
+  },
+
+  componentDidMount() {
+    window.addEventListener('scroll', this._calculateStyles);
+  },
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._calculateStyles);
+  },
+
+  _register(position, offsetTop, offsetHeight) {
+    this.items[position] = {
+      offsetTop,
+      offsetHeight,
+    };
+  },
+
+  _getStyle(position) {
+    const {styles} = this.state;
+
+    return styles[position];
+  },
+
+  _calculateStyles() {
+    const styles = [];
+    this.items.reduce((height, item, index) => {
+      if (window.pageYOffset + height >= item.offsetTop) {
+        styles[index] = {
+          position: 'fixed',
+          top: height,
+          width: '100%',
+        }
+      } else {
+        styles[index] = {
+          position: 'static',
+        }
+      }
+      return height + item.offsetHeight;
+    }, 0);
+    this.setState({
+      styles,
+    });
+  },
+
+  render() {
+    const {children} = this.props;
+
+    return (
+      <div>
+        {children}
+      </div>
+    );
+  },
+
+});
+
+export default StickyStackContext;
