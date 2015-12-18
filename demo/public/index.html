@@ -3,30 +3,115 @@
   <head>
     <title>React Sticky Stack</title>
     <style>
-      * {
+      *, *:after, *:before {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
-      p {
-        height: 500px;
+
+      body {
+        background-color: #FF4C4B;
+        background-size: 11.25rem, 100%;
+        background-position: center, center;
+        background-repeat: repeat, no-repeat;
+        background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 11.25rem),
+                          -webkit-linear-gradient(top, #FF4C4B 0%, #661dff 50%, #AA01FF 100%);
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 11.25rem),
+                          linear-gradient(180deg, #FF4C4B 0%, #661dff 50%, #AA01FF 100%);
+
+        color: white;
+
+        font-family: -apple-system , '.SFNSText-Regular' , 'Helvetica Neue' , 'Roboto' , 'Segoe UI' , sans-serif;
+        font-weight: 300;
+        text-align: center;
       }
 
-      h1 {
-        background-color: red;
-        height: 50px;
-        width: 200px;
+      a {
+        text-decoration: none;
+        color: white;
+        transition: all 0.1s ease-out;
+      }
+      a:hover {
+        color: #FF4C4B;
       }
 
-      h2 {
-        background-color: green;
-        height: 25px;
-        width: 200px;
+
+      .logo {
+        position: relative;
+        margin: 0 auto;
+        padding: 4rem 0 0;
+        width: 180px;
+        height: 106px;
+      }
+      .logo:after {
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        width: 100%;
+        height: 4px;
+
+        background-color: currentColor;
+        content: '';
       }
 
-      h3 {
-        background-color: blue;
-        height: 12.5px;
-        width: 200px;
+      .logo__img {
+        display: block;
+        width: 180px;
+        height: 34px;
+      }
+
+
+      .block {
+        display: inline-block;
+        width: 11.25rem;
+        height: 5rem;
+
+        background-color: currentColor;
+      }
+
+      .block--tall {
+        height: 8rem;
+      }
+
+      .block--short {
+        height: 3rem;
+      }
+
+      .block--content {
+        height: auto;
+      }
+
+      .block--credits {
+        padding: 0.5rem 0;
+        text-transform: uppercase;
+        font-size: 0.666rem;
+        background-color: transparent;
+        color: white;
+      }
+
+
+      .link {
+        display: block;
+
+        color: #A500FB;
+
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1rem 0.5rem;
+      }
+      .link:hover {
+        color: white;
+        background-color: #FF4C4B;
+      }
+
+
+      .divider {
+        height: 100vh;
+      }
+      .divider--short {
+        height: 30vh;
       }
     </style>
   </head>
