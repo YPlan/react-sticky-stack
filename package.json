@@ -10,7 +10,12 @@
     "demo": "webpack ./demo/index.js ./demo/public/bundle.js",
     "start": "node ./demo/server"
   },
-  "author": "YPlan Front End Team",
+  "authors": [
+    "Alex Andrews",
+    "Ben Davis",
+    "Lucas Motta",
+    "Michele Bertoli"
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.3.17",
@@ -42,5 +47,16 @@
       "<rootDir>/node_modules/react-addons-test-utils",
       "<rootDir>/node_modules/fbjs"
     ]
-  }
+  },
+  "tags": [
+    "react",
+    "sticky",
+    "stack"
+  ],
+  "keywords": [
+    "react",
+    "react-component",
+    "sticky",
+    "stack"
+  ]
 }
