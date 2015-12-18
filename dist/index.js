@@ -5,15 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.StickyStackItem = exports.StickyStackContext = undefined;
 
-var _sticyStackContext = require('./components/sticy-stack-context');
+var _stickyStackContext = require('./components/sticky-stack-context');
 
-var _sticyStackContext2 = _interopRequireDefault(_sticyStackContext);
+var _stickyStackContext2 = _interopRequireDefault(_stickyStackContext);
 
-var _sticyStackItem = require('./components/sticy-stack-item');
+var _stickyStackItem = require('./components/sticky-stack-item');
 
-var _sticyStackItem2 = _interopRequireDefault(_sticyStackItem);
+var _stickyStackItem2 = _interopRequireDefault(_stickyStackItem);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.StickyStackContext = _sticyStackContext2.default;
-exports.StickyStackItem = _sticyStackItem2.default;
+exports.StickyStackContext = _stickyStackContext2.default;
+exports.StickyStackItem = _stickyStackItem2.default;

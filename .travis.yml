@@ -1,6 +1,8 @@
 language: node_js
 node_js:
 - 4.2.3
+before_deploy:
+- npm run demo
 deploy:
   provider: heroku
   skip_cleanup: true

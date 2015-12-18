@@ -1,4 +1,4 @@
-import StickyStackContext from './components/sticy-stack-context';
-import StickyStackItem from './components/sticy-stack-item';
+import StickyStackContext from './components/sticky-stack-context';
+import StickyStackItem from './components/sticky-stack-item';
 
 export {StickyStackContext, StickyStackItem};
