@@ -5,10 +5,17 @@ React Sticky Stack
 
 A Sticky Stack component for [React.js](http://facebook.github.io/react/)
 
+Installation
+------------
+
+```sh
+$ npm install react-sticky-stack --save
+```
+
 Demo
 ----
 
-[https://react-sticky-stack.herokuapp.com](https://react-sticky-stack.herokuapp.com)
+[https://react-sticky-stack.herokuapp.com/](https://react-sticky-stack.herokuapp.com/)
 
 Usage
 -----
@@ -55,4 +62,11 @@ const App = React.createClass({
 });
 
 ReactDOM.render(<App />, document.getElementById('app'));
+```
+
+Test
+----
+
+```sh
+$ npm test
 ```
