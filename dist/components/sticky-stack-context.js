@@ -17,6 +17,11 @@ var StickyStackContext = _react2.default.createClass({
     children: _react2.default.PropTypes.any
   },
 
+  childContextTypes: {
+    getStyle: _react2.default.PropTypes.func,
+    register: _react2.default.PropTypes.func
+  },
+
   getInitialState: function getInitialState() {
     return {
       items: [],
@@ -86,12 +91,7 @@ var StickyStackContext = _react2.default.createClass({
     );
   },
 
-  items: [],
-
-  childContextTypes: {
-    getStyle: _react2.default.PropTypes.func,
-    register: _react2.default.PropTypes.func
-  }
+  items: []
 
 });
 

@@ -6,6 +6,11 @@ const StickyStackContext = React.createClass({
     children: React.PropTypes.any,
   },
 
+  childContextTypes: {
+    getStyle: React.PropTypes.func,
+    register: React.PropTypes.func,
+  },
+
   getInitialState() {
     return {
       items: [],
@@ -82,11 +87,6 @@ const StickyStackContext = React.createClass({
   },
 
   items: [],
-
-  childContextTypes: {
-    getStyle: React.PropTypes.func,
-    register: React.PropTypes.func,
-  },
 
 });
 

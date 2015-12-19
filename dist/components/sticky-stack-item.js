@@ -22,6 +22,11 @@ var StickyStackItem = _react2.default.createClass({
     position: _react2.default.PropTypes.number
   },
 
+  contextTypes: {
+    getStyle: _react2.default.PropTypes.func,
+    register: _react2.default.PropTypes.func
+  },
+
   getInitialState: function getInitialState() {
     return {
       height: null
@@ -61,13 +66,7 @@ var StickyStackItem = _react2.default.createClass({
         children
       )
     );
-  },
-
-  contextTypes: {
-    getStyle: _react2.default.PropTypes.func,
-    register: _react2.default.PropTypes.func
   }
-
 });
 
 exports.default = StickyStackItem;

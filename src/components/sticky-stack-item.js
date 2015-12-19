@@ -8,6 +8,11 @@ const StickyStackItem = React.createClass({
     position: React.PropTypes.number,
   },
 
+  contextTypes: {
+    getStyle: React.PropTypes.func,
+    register: React.PropTypes.func,
+  },
+
   getInitialState() {
     return {
       height: null,
@@ -42,11 +47,6 @@ const StickyStackItem = React.createClass({
         </div>
       </div>
     );
-  },
-
-  contextTypes: {
-    getStyle: React.PropTypes.func,
-    register: React.PropTypes.func,
   },
 
 });

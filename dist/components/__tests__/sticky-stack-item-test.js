@@ -26,6 +26,10 @@ describe('StickyStackItem', function () {
       propTypes: {
         children: _react2.default.PropTypes.element
       },
+      childContextTypes: {
+        getStyle: _react2.default.PropTypes.func,
+        register: _react2.default.PropTypes.func
+      },
       getChildContext: function getChildContext() {
         return {
           getStyle: function getStyle() {},
@@ -38,11 +42,6 @@ describe('StickyStackItem', function () {
           null,
           this.props.children
         );
-      },
-
-      childContextTypes: {
-        getStyle: _react2.default.PropTypes.func,
-        register: _react2.default.PropTypes.func
       }
     });
 

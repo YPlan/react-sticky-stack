@@ -15,6 +15,10 @@ describe('StickyStackItem', () => {
       propTypes: {
         children: React.PropTypes.element,
       },
+      childContextTypes: {
+        getStyle: React.PropTypes.func,
+        register: React.PropTypes.func,
+      },
       getChildContext() {
         return {
           getStyle: () => {},
@@ -23,10 +27,6 @@ describe('StickyStackItem', () => {
       },
       render() {
         return <div>{this.props.children}</div>;
-      },
-      childContextTypes: {
-        getStyle: React.PropTypes.func,
-        register: React.PropTypes.func,
       },
     });
 
