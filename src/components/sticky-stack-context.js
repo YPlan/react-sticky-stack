@@ -86,8 +86,6 @@ const StickyStackContext = React.createClass({
     );
   },
 
-  items: [],
-
 });
 
 export default StickyStackContext;

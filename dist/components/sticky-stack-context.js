@@ -89,10 +89,7 @@ var StickyStackContext = _react2.default.createClass({
       null,
       children
     );
-  },
-
-  items: []
-
+  }
 });
 
 exports.default = StickyStackContext;
