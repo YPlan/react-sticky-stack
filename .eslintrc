@@ -174,6 +174,7 @@
     "space-infix-ops": 2,            // http://eslint.org/docs/rules/space-infix-ops
     "space-return-throw-case": 2,    // http://eslint.org/docs/rules/space-return-throw-case
     "spaced-comment": [2, "always"], // Require a space after the beginning of a comment before comment content begins
+    "jsx-quotes": [2, "prefer-double"], // http://eslint.org/docs/rules/jsx-quotes
 /**
  * JSX style
  */
@@ -186,7 +187,6 @@
     "react/jsx-max-props-per-line": [2, {"maximum": 3}],
     "react/jsx-no-duplicate-props": 2,
     "react/jsx-no-undef": 2,
-    "react/jsx-quotes": [2, "double"],
     "react/jsx-no-undef": 2,
     "react/jsx-sort-props": 2,
     "react/jsx-sort-prop-types": 2,
