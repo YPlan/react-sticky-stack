@@ -15,7 +15,7 @@ jest.dontMock('../sticky-stack-context');
 var StickyStackContext = require('../sticky-stack-context').default;
 
 describe('StickyStackContext', function () {
-  var stickyStackContext = undefined;
+  var stickyStackContext = void 0;
 
   beforeEach(function () {
     window.addEventListener = jest.genMockFunction();
