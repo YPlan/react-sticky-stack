@@ -22,7 +22,7 @@ const StickyStackItem = React.createClass({
   componentDidMount() {
     const {register} = this.context;
     const {position} = this.props;
-    const {offsetTop, offsetHeight} = ReactDOM.findDOMNode(this);
+    const {offsetTop, offsetHeight} = this.domRef;
 
     register(position, offsetTop, offsetHeight);
 
@@ -41,7 +41,7 @@ const StickyStackItem = React.createClass({
     const {height} = this.state;
 
     return (
-      <div style={{height}}>
+      <div ref={domRef => this.domRef = domRef} style={{height}}>
         <div style={getStyle(position)}>
           {children}
         </div>

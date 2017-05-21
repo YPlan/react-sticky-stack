@@ -13,6 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var StickyStackContext = _react2.default.createClass({
   displayName: 'StickyStackContext',
 
+
   propTypes: {
     children: _react2.default.PropTypes.any
   },
@@ -43,6 +44,7 @@ var StickyStackContext = _react2.default.createClass({
   _register: function _register(position, offsetTop, offsetHeight) {
     var items = this.state.items;
 
+
     items[position] = {
       offsetTop: offsetTop,
       offsetHeight: offsetHeight
@@ -54,6 +56,7 @@ var StickyStackContext = _react2.default.createClass({
   },
   _getStyle: function _getStyle(position) {
     var styles = this.state.styles;
+
 
     return styles[position];
   },
@@ -83,6 +86,7 @@ var StickyStackContext = _react2.default.createClass({
   },
   render: function render() {
     var children = this.props.children;
+
 
     return _react2.default.createElement(
       'div',

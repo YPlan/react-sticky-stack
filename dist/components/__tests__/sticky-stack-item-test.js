@@ -15,7 +15,7 @@ jest.dontMock('../sticky-stack-item');
 var StickyStackItem = require('../sticky-stack-item').default;
 
 describe('StickyStackItem', function () {
-  var register = undefined;
+  var register = void 0;
 
   beforeEach(function () {
     register = jest.genMockFunction();
